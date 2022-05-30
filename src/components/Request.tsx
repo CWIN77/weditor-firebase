@@ -17,8 +17,7 @@ const UserImg = styled.img`
 `
 const Title = styled.h1`
   font-size: 18px;
-  margin-left: 6px;
-  font-weight: bold;
+  margin-left: 8px;
 `
 const Informate = styled.div`
   display:flex;
