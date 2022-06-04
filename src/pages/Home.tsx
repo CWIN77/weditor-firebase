@@ -1,19 +1,21 @@
-import styled from 'styled-components' 
+import styled from 'styled-components'
 import Request from '../components/Request'
-
-const Container = styled.div`
-  width:100%;
-  display:flex;
-  flex-direction: column;
-` 
 
 function Home() {
   return (
     <Container>
       <Request/>
       <Request/>
+      <Request/>
+      <Request/>
     </Container>
   )
 }
+
+const Container = styled.div`
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+` 
 
 export default Home

@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ac0bc946.css",
+    "main.js": "/static/js/main.b69b57ca.js",
+    "static/media/money.svg": "/static/media/money.d0c4aa31854959b8e8dac9046f796543.svg",
+    "static/media/clock.svg": "/static/media/clock.dc1711511149b017f0444557bf624a2e.svg",
+    "index.html": "/index.html",
+    "static/media/box_bold.svg": "/static/media/box_bold.6f2ce2522daeeb7988037357a38bdec5.svg",
+    "static/media/thumbnail_bold.svg": "/static/media/thumbnail_bold.35670a9ed529bb9ff84d80a1658771d6.svg",
+    "static/media/arrow.svg": "/static/media/arrow.4fa88b330d9b6c60313012e6dfa1927a.svg",
+    "static/media/tag.svg": "/static/media/tag.236f71c03c93625ae74bf20a08d003a4.svg",
+    "static/media/profile.svg": "/static/media/profile.6e99b99a1f780c174b1e8d21d01214fe.svg",
+    "static/media/video.svg": "/static/media/video.6287078a0b16a8fe8d5ee11440cfe78a.svg",
+    "static/media/ratio.svg": "/static/media/ratio.c8dbc91db534126dac79914da483aef4.svg",
+    "static/media/subtitle.svg": "/static/media/subtitle.418bf9452d247f9ed361254078a724b4.svg",
+    "static/media/thumbnail.svg": "/static/media/thumbnail.e05a98a76725af53e9570e355772b0e2.svg",
+    "static/media/upload.svg": "/static/media/upload.d9361645f0b5cbe4aa09eae13f1194d7.svg",
+    "static/media/medal.svg": "/static/media/medal.cbac334921dfb767ceeceeab485a01a1.svg",
+    "static/media/download.svg": "/static/media/download.45d156404b2048b649163a355ae4ef3a.svg",
+    "static/media/video_bold.svg": "/static/media/video_bold.4966eeb92103af7755dcad1d2b78398a.svg",
+    "static/media/box.svg": "/static/media/box.29b623ebf0eeec940dae29c4c421baca.svg",
+    "static/media/medal_bold.svg": "/static/media/medal_bold.01e700d453f8606d370a062ed0022fca.svg",
+    "static/media/play.svg": "/static/media/play.6a45aece36692a05922208299df016f5.svg",
+    "static/media/more.svg": "/static/media/more.887f70876066fb7eba47ae3cdabf411e.svg",
+    "static/media/menu.svg": "/static/media/menu.d97492b5dea2086b430da4cc2dae8691.svg",
+    "main.ac0bc946.css.map": "/static/css/main.ac0bc946.css.map",
+    "main.b69b57ca.js.map": "/static/js/main.b69b57ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac0bc946.css",
+    "static/js/main.b69b57ca.js"
+  ]
+}
