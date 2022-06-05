@@ -2,11 +2,45 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components' 
 import { ReactComponent as Svg_money } from '../svgs/money.svg';
 import { ReactComponent as Svg_play } from '../svgs/play.svg';
+import { ReactComponent as Svg_tag } from '../svgs/tag.svg';
+import { ReactComponent as Svg_ratio } from '../svgs/ratio.svg';
+import { ReactComponent as Svg_subtitle } from '../svgs/subtitle.svg';
+import { ReactComponent as Svg_clock } from '../svgs/clock.svg';
+import { ReactComponent as Svg_menu } from '../svgs/menu.svg';
 
 function Request() {
+  const iconStyle = {fill:"#C8D4E6",width:16,height:16}
   return (
     <Container>
-      <div>
+      <Guide>
+        <div style={{justifyContent: "space-between"}}>
+          <div>
+            <Svg_tag {...iconStyle} />
+            <h2>게임 / 자막</h2>
+          </div>
+          <div>
+            <Svg_subtitle {...iconStyle} />
+            <h2>자막 필수</h2> {/* 자막 불필요 */}
+          </div>
+        </div>
+        <div style={{justifyContent:'center'}}>
+          <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
+            <Svg_play width={18} height={18} stroke="#C8D4E6" />
+            <h1>Play</h1>
+          </PlayBtn>
+        </div>
+        <div style={{justifyContent: "space-between"}}>
+          <div>
+            <Svg_clock {...iconStyle} />
+            <h2>8분 이내</h2>
+          </div>
+          <div>
+            <Svg_ratio {...iconStyle} />
+            <h2>16 : 9 비율</h2>
+          </div>
+        </div>
+      </Guide>
+      <div style={{marginLeft:2}}>
         <div style={{display:"flex",alignItems:'center'}}>
           <UserImg src='https://lh3.googleusercontent.com/a-/AOh14GhBIpwktw4iDwX7_dafbrn64O2wNRJbx1hivycj5A=s96-c'/>
           <StatusText>CWIN77</StatusText>
@@ -18,22 +52,12 @@ function Request() {
           <ExplaneText>게임 플레이 영상중에서 괜찮은 장면만 적당히 골라서 컷편집으로 만들어서 올려주세요.</ExplaneText>
         </Link>
       </div>
-      <div>
-        <div style={{display:'flex',alignItems:'center',flexWrap:'wrap'}}>
-          <Tag>게임</Tag>
-          <Tag>무자막</Tag>
-          <Tag>무자막</Tag>
+      <div style={{display:'flex',alignItems:'center',marginTop:8,marginBottom:2,justifyContent:"space-between"}}>
+        <div style={{display:'flex',alignItems:'center',margin:2,marginTop:6}}>
+          <Svg_money width={20} height={20} fill="#C8D4E6" />
+          <Payment>60,000원~</Payment>
         </div>
-        <div style={{display:'flex',alignItems:'center',marginTop:18,marginBottom:2,justifyContent:"space-between"}}>
-          <div style={{display:'flex',alignItems:'center'}}>
-            <Svg_money width={22} height={22} fill="#C8D4E6" />
-            <Payment>60,000원~</Payment>
-          </div>
-          <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-            <Svg_play width={13} height={13} stroke="#121212" />
-            <h2>영상보기</h2>
-          </PlayBtn>
-        </div>
+        <Svg_menu width={20} height={20} fill="#C8D4E6" style={{padding:6}} />
       </div>
     </Container>
   )
@@ -44,13 +68,10 @@ const Container = styled.div`
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  width:calc(100vw - 2rem - 2rem);
-  height:calc((100vw - 2rem - 2rem) / 16*9);
-  padding: 1rem;
+  width:calc(100vw - 2rem);
   margin: 1rem;
-  background-color: #272b35;
   border-radius: 8px;
-  @media only screen and (min-width:780px) {
+  /* @media only screen and (min-width:780px) {
     margin-right:0px;
     margin-bottom: 0px;
     width: calc(50vw - 3.8rem);
@@ -67,7 +88,7 @@ const Container = styled.div`
     margin-bottom: 0px;
     width: calc((100vw / 4) - 3.6rem);
     height:calc(((100vw / 4) - 3.6rem) / 16 * 9);
-  }
+  } */
 `
 const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   width:calc(100vw - 2rem - 2.4rem);
@@ -86,7 +107,7 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
     align-items: center;
     h2{
         font-size: 14px;
-        margin-left: 6px;
+        margin-left: 8px;
       }
   }
 `
@@ -98,16 +119,18 @@ const UserImg = styled.img`
 `
 const Title = styled.h1`
   font-size: 18px;
+  /* font-weight: bold; */
   width:92%;
-  margin-top:6px;
-  margin-bottom: 2px;
+  margin-top:4px;
+  margin-bottom: 6px;
 `
 const StatusText = styled.h4`
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(218, 228, 242, 0.7);
 `
 const ExplaneText = styled.h2`
   font-size: 14px;
+  margin-top: 6px;
   width:92%;
   color: rgba(218, 228, 242, 0.7);
 `
@@ -127,13 +150,13 @@ const PlayBtn = styled.a`
   display:flex;
   align-items: center;
   border-radius: 8px;
-  background-color: #C8D4E6;
   padding: 6px 8px;
   margin: 2px;
-  h2{
-    font-size: 15px;
-    margin-left: 6px;
-    color:#121212;
+  /* border:2px solid #C8D4E6; */
+  h1{
+    font-size: 18px;
+    margin-left: 8px;
+    color:#C8D4E6;
   }
 `
 
