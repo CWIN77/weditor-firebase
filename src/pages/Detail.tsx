@@ -15,7 +15,7 @@ import { ReactComponent as Svg_box } from '../svgs/box.svg';
 
 function Detail() {
   const topIconStyle = {fill:"#C8D4E6",width:20,height:20,style:{padding:"0.5rem",cursor:'pointer'}}
-  const mainIconStyle = {fill:"#C8D4E6",width:17,height:17}
+  const mainIconStyle = {fill:"#C8D4E6",width:16,height:16}
   const navIconStyle = {fill:"#C8D4E6",width:20,height:20,stroke:"#C8D4E6"}
   const {id} = useParams();
   useEffect(()=>{
@@ -46,7 +46,7 @@ function Detail() {
             </div>
             <div style={{justifyContent:'center'}}>
               <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-                <Svg_play width={18} height={18} stroke="#C8D4E6" />
+                <Svg_play width={16} height={16} stroke="#C8D4E6" />
                 <h1>Play</h1>
               </PlayBtn>
             </div>
@@ -61,28 +61,26 @@ function Detail() {
               </div>
             </div>
           </Guide>
-          <MainText>
-            <Title>간단한 컷편집 해주세요 간단한 컷 편집을 부탁드립니다해주세요!</Title>
-            <Information>
-              <img src='https://static-cdn.jtvnw.net/jtv_user_pictures/f37d5675-c11a-4564-9d8a-c8b2fca47f2d-profile_image-70x70.png'></img>
-              <h2>CWIN77</h2>
-              <span/>
-              <h2>2022년 6월 2일</h2>
-            </Information>
-            <Explane>
-              <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-              <h2>그리고밑에 적는 하이라이트 부분은</h2>
-              <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-              <h2>그리고 밑에 적는 하이라이트 부분은</h2>
-              <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-              <h2>그리고밑에 적는 하이라이트 부분은</h2>
-              <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-              <h2>그리고 밑에 적는 하이라이트 부분은</h2>
-              <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-              <h2>그리고밑에 적는 하이라이트 부분은</h2>
-              {/* 작성시 엔터마다 ^를 넣고 후에 폰트를 ^에 따라 배열로 변환하여 */}
-            </Explane>
-          </MainText>
+          <Title>간단한 컷편집 해주세요 간단한 컷 편집을 부탁드립니다해주세요!</Title>
+          <Information>
+            <img src='https://static-cdn.jtvnw.net/jtv_user_pictures/f37d5675-c11a-4564-9d8a-c8b2fca47f2d-profile_image-70x70.png'></img>
+            <h2>CWIN77</h2>
+            <span/>
+            <h2>2022년 6월 2일</h2>
+          </Information>
+          <Explane>
+            <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
+            <h2>그리고밑에 적는 하이라이트 부분은</h2>
+            <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
+            <h2>그리고 밑에 적는 하이라이트 부분은</h2>
+            <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
+            <h2>그리고밑에 적는 하이라이트 부분은</h2>
+            <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
+            <h2>그리고 밑에 적는 하이라이트 부분은</h2>
+            <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
+            <h2>그리고밑에 적는 하이라이트 부분은</h2>
+            {/* 작성시 엔터마다 ^를 넣고 후에 폰트를 ^에 따라 배열로 변환하여 */}
+          </Explane>
         </Main>
       </div>
       <Nav>
@@ -116,7 +114,7 @@ const PlayBtn = styled.a`
   padding: 6px 8px;
   margin: 2px;
   h1{
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 8px;
     color:#C8D4E6;
   }
@@ -158,9 +156,6 @@ const Explane = styled.div`
   }
   width:95%;
 `
-const MainText = styled.div`
-  margin: 8px;
-`
 const Title = styled.h1`
   font-size: 21px;
   word-wrap: break-word;
@@ -196,14 +191,14 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   flex-direction: column;
   justify-content: space-between;
   padding:1.2rem;
-  margin-bottom: 8px;
-  max-width: calc(42.5vh / ${(props)=>props.ratio2 ? props.ratio2 : 9} * ${ (props)=>props.ratio1 ? props.ratio1 : 16});
-  max-height: 42.5vh;
+  margin-bottom: 12px;
+  max-width: calc(45vh / ${(props)=>props.ratio2 ? props.ratio2 : 9} * ${ (props)=>props.ratio1 ? props.ratio1 : 16});
+  max-height: 45vh;
   div{
     display:flex;
     align-items: center;
     h2{
-        font-size: 14px;
+        font-size: 13px;
         margin-left: 6px;
       }
   }

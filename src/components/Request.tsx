@@ -25,7 +25,7 @@ function Request() {
         </div>
         <div style={{justifyContent:'center'}}>
           <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-            <Svg_play width={18} height={18} stroke="#C8D4E6" />
+            <Svg_play width={16} height={16} stroke="#C8D4E6" />
             <h1>Play</h1>
           </PlayBtn>
         </div>
@@ -98,7 +98,7 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
     display:flex;
     align-items: center;
     h2{
-        font-size: 14px;
+        font-size: 13px;
         margin-left: 8px;
       }
   }
@@ -157,7 +157,7 @@ const PlayBtn = styled.a`
   padding: 6px 8px;
   margin: 2px;
   h1{
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 8px;
     color:#C8D4E6;
   }
