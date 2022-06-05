@@ -14,14 +14,16 @@ import { ReactComponent as Svg_thumbnail_bold } from '../svgs/thumbnail_bold.svg
 
 function Navbar() {
   const [page,setPage] = useState(window.location.pathname)
-  const IconStyle = {width:16,height:16,fill:"#DDE5F1",style:{marginRight:6}}
+  const [isOver,setIsOver] = useState(false)
+  const IconStyle = {width:16,height:16,fill:"#C8D4E6",style:{marginRight:6}}
+  window.addEventListener('scroll',()=>{setIsOver(window.scrollY > 68)})
   return (
-    <Container>
+    <div>
       <Top>
         <Title>Weditor</Title>
         <div style={{display:'flex',alignItems:'center'}}>
           <Svg_profile width={28} height={28} style={{margin:4,padding:2}}/>
-          <Svg_more width={20} height={20} fill="#DDE5F1" style={{padding:6,display:'flex'}} />
+          <Svg_more width={20} height={20} fill="#C8D4E6" style={{padding:6,display:'flex'}} />
         </div>
       </Top>
       <Nav>
@@ -58,13 +60,47 @@ function Navbar() {
           <h2>썸네일</h2>
         </NavBtn>
       </Nav>
-    </Container>
+      {
+        isOver &&
+        <NavOver>
+          <NavBtn onClick={()=>{setPage("/")}} to={"/"} page={`${page==="/"}`}>
+            {
+              page === '/'
+              ? <Svg_video_bold {...IconStyle} />
+              : <Svg_video {...IconStyle} />
+            }
+            <h2>편집각</h2>
+          </NavBtn>
+          <NavBtn onClick={()=>{setPage("/save")}} to={"/save"} page={`${page==="/save"}`}>
+            {
+              page === '/save'
+              ? <Svg_box_bold {...IconStyle} />
+              : <Svg_box {...IconStyle} />
+            }
+            <h2>찜목록</h2>
+          </NavBtn>
+          <NavBtn onClick={()=>{setPage("/result")}} to={"/result"} page={`${page==="/result"}`}>
+            {
+              page === '/result'
+              ? <Svg_medal_bold {...IconStyle} />
+              : <Svg_medal {...IconStyle} />
+            }
+            <h2>내성과</h2>
+          </NavBtn>
+          <NavBtn onClick={()=>{setPage("/thumbnail")}} to={"/thumbnail"} page={`${page==="/thumbnail"}`}>
+            {
+              page === '/thumbnail'
+              ? <Svg_thumbnail_bold {...IconStyle} />
+              : <Svg_thumbnail {...IconStyle} />
+            }
+            <h2>썸네일</h2>
+          </NavBtn>
+        </NavOver>
+      }
+    </div>
   )
 }
 
-const Container = styled.div`
-  background-color: #323741;
-`
 const Top = styled.div`
   width:calc(100% - 2rem);
   padding: 1rem;
@@ -81,14 +117,28 @@ const Profile = styled.span`
   height:28px;
   margin: 4px;
   border-radius: 100px;
-  background-color:#DDE5F1;
+  background-color:#C8D4E6;
 `
 const Nav = styled.div`
   padding: 1rem;
+  padding-bottom: 3px;
+  margin-bottom: 1rem;
   display:flex;
   overflow-x: auto;
-  width:calc(100vw - 2rem);
+  width:calc(100% - 2rem);
   align-items: center;
+`
+const NavOver = styled.div`
+  background-color:#1d2127;
+  padding: 1rem;
+  padding-bottom: clac(1rem + 3px);
+  /* margin-bottom: 1rem; */
+  display:flex;
+  overflow-x: auto;
+  width:calc(100% - 2rem);
+  align-items: center;
+  position: fixed;
+  top:0px;
 `
 const NavBtn = styled(Link)<{page:string}>`
   padding: 6px;

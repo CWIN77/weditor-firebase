@@ -4,7 +4,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #323741;
+  background-color: #1d2127;
 }
 
 code {
@@ -21,7 +21,7 @@ code {
   outline: none;
   text-decoration: none;
   font-size: 14px;
-  color: #DDE5F1;
+  color: #C8D4E6;
   font-weight: 400;
 }
 

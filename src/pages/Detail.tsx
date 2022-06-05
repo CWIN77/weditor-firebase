@@ -14,9 +14,9 @@ import { ReactComponent as Svg_upload } from '../svgs/upload.svg';
 import { ReactComponent as Svg_box } from '../svgs/box.svg';
 
 function Detail() {
-  const topIconStyle = {fill:"#DDE5F1",width:20,height:20,style:{padding:"0.5rem",cursor:'pointer'}}
-  const mainIconStyle = {fill:"#DDE5F1",width:16,height:16}
-  const navIconStyle = {fill:"#DDE5F1",width:20,height:20,stroke:"#DDE5F1"}
+  const topIconStyle = {fill:"#C8D4E6",width:20,height:20,style:{padding:"0.5rem",cursor:'pointer'}}
+  const mainIconStyle = {fill:"#C8D4E6",width:17,height:17}
+  const navIconStyle = {fill:"#C8D4E6",width:20,height:20,stroke:"#C8D4E6"}
   const {id} = useParams();
   useEffect(()=>{
     console.log(id)
@@ -26,35 +26,35 @@ function Detail() {
       <TopBar>
         <Svg_arrow onClick={()=>{window.history.back()}} {...topIconStyle} />
         <div style={{display:'flex',alignItems:'center'}}>
-          <Svg_money/>
-          <h4 style={{fontSize:16,marginLeft:6}}>최소 60,000원 지급</h4>
+          <Svg_money width={20} height={20} />
+          <h1 style={{fontSize:17,marginLeft:6}}>최소 60,000원 지급</h1>
         </div>
         <Svg_menu {...topIconStyle} />
       </TopBar>
       <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
         <Main>
           <Guide>
+            <div>
+              <Svg_tag {...mainIconStyle} />
+              <h2>게임 / 자막</h2>
+            </div>
+            <div style={{justifyContent:'center'}}>
+              <Svg_ratio {...mainIconStyle} />
+              <h2>16 : 9 비율</h2>
+            </div>
             <div style={{justifyContent: "space-between"}}>
               <div>
-                <Svg_tag {...mainIconStyle} />
-                <h2>게임 / 자막</h2>
+                <Svg_clock {...mainIconStyle} />
+                <h2>8분 이내</h2>
               </div>
               <div>
                 <Svg_subtitle {...mainIconStyle} />
                 <h2>자막 필수</h2> {/* 자막 불필요 */}
               </div>
             </div>
-            <div style={{justifyContent:'center'}}>
-              <Svg_ratio {...mainIconStyle} />
-              <h2>16 : 9 비율</h2>
-            </div>
-            <div>
-              <Svg_clock {...mainIconStyle} />
-              <h2>8분 이내</h2>
-            </div>
           </Guide>
           <MainText>
-            <Title>간단한 컷편집 해주세요!</Title>
+            <Title>간단한 컷편집 해주세요 간단한 컷 편집을 부탁드립니다해주세요!</Title>
             <Information>
               <img src='https://static-cdn.jtvnw.net/jtv_user_pictures/f37d5675-c11a-4564-9d8a-c8b2fca47f2d-profile_image-70x70.png'></img>
               <h2>CWIN77</h2>
@@ -111,7 +111,7 @@ const Nav = styled.div`
 `
 const NavIconWrapper = styled.div`
   display:flex;
-  background-color:#1B1E24;
+  background-color:#272b35;
   border-radius:8px;
   padding:6px;
 `
@@ -125,7 +125,8 @@ const NavIcon = styled.span`
   margin: 0px 2px;
   width:50px;
   h2{
-    font-size: 10px;
+    user-select: none;
+    font-size: 11px;
     margin-top: 4px;
   }
 `
@@ -142,33 +143,34 @@ const MainText = styled.div`
 `
 const Title = styled.h1`
   font-size: 21px;
+  word-wrap: break-word;
 `
 const Information = styled.div`
   display:flex;
   align-items: center;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 12px;
   h2{
     font-size: 14px;
   }
   span{
     width:3px;
     height:3px;
-    background-color: #DDE5F1;
+    background-color: #C8D4E6;
     margin: 8px;
   }
   img{
-    width:22px;
-    height:22px;
+    width:18px;
+    height:18px;
     border-radius: 100px;
     padding:2px;
-    margin-right: 6px;
+    margin-right: 4px;
   }
 `
 const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   width:calc(100vw - 2rem - 2.4rem);
   height:calc((100vw - 2rem - 2.4rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
-  background-color: #1C2025;
+  background-color: #272b35;
   border-radius: 8px;
   display:flex;
   flex-direction: column;
@@ -181,8 +183,8 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
     display:flex;
     align-items: center;
     h2{
-        font-size: 13px;
-        margin-left: 8px;
+        font-size: 14px;
+        margin-left: 6px;
       }
   }
 `
