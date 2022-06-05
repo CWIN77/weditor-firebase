@@ -25,6 +25,23 @@ code {
   font-weight: 400;
 }
 
+/* #root::-webkit-scrollbar{
+  width: 2px;
+  background-color: red;
+}
+#root::-webkit-scrollbar-track{
+  width: 2px;
+} */
+
+body::-webkit-scrollbar{
+  width:8px;
+  background-color: initial;
+}
+body::-webkit-scrollbar-thumb{
+  width:8px;
+  background-color: #373d4a;
+}
+
 img {
   width: 300px;
   height: 300px;

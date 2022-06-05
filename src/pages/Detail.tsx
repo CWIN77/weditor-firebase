@@ -34,13 +34,21 @@ function Detail() {
       <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
         <Main>
           <Guide>
-            <div>
-              <Svg_tag {...mainIconStyle} />
-              <h2>게임 / 자막</h2>
+            <div style={{justifyContent: "space-between"}}>
+              <div>
+                <Svg_tag {...mainIconStyle} />
+                <h2>게임 / 자막</h2>
+              </div>
+              <div>
+                <Svg_subtitle {...mainIconStyle} />
+                <h2>자막 필수</h2> {/* 자막 불필요 */}
+              </div>
             </div>
             <div style={{justifyContent:'center'}}>
-              <Svg_ratio {...mainIconStyle} />
-              <h2>16 : 9 비율</h2>
+              <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
+                <Svg_play width={18} height={18} stroke="#C8D4E6" />
+                <h1>Play</h1>
+              </PlayBtn>
             </div>
             <div style={{justifyContent: "space-between"}}>
               <div>
@@ -48,8 +56,8 @@ function Detail() {
                 <h2>8분 이내</h2>
               </div>
               <div>
-                <Svg_subtitle {...mainIconStyle} />
-                <h2>자막 필수</h2> {/* 자막 불필요 */}
+                <Svg_ratio {...mainIconStyle} />
+                <h2>16 : 9 비율</h2>
               </div>
             </div>
           </Guide>
@@ -101,6 +109,18 @@ function Detail() {
   )
 }
 
+const PlayBtn = styled.a`
+  display:flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 6px 8px;
+  margin: 2px;
+  h1{
+    font-size: 18px;
+    margin-left: 8px;
+    color:#C8D4E6;
+  }
+`
 const Nav = styled.div`
   display:flex;
   align-items: center;
@@ -148,8 +168,8 @@ const Title = styled.h1`
 const Information = styled.div`
   display:flex;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 12px;
+  margin-top: 12px;
+  margin-bottom: 14px;
   h2{
     font-size: 14px;
   }

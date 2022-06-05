@@ -52,7 +52,7 @@ function Request() {
           <ExplaneText>게임 플레이 영상중에서 괜찮은 장면만 적당히 골라서 컷편집으로 만들어서 올려주세요.</ExplaneText>
         </Link>
       </div>
-      <div style={{display:'flex',alignItems:'center',marginTop:8,marginBottom:2,justifyContent:"space-between"}}>
+      <div style={{display:'flex',alignItems:'center',marginTop:8,marginBottom:2,justifyContent:"space-between",width:'100%'}}>
         <div style={{display:'flex',alignItems:'center',margin:2,marginTop:6}}>
           <Svg_money width={20} height={20} fill="#C8D4E6" />
           <Payment>60,000원~</Payment>
@@ -68,31 +68,25 @@ const Container = styled.div`
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  width:calc(100vw - 2rem);
+  width:calc(100vw - 2rem - 16px);
   margin: 1rem;
   border-radius: 8px;
-  /* @media only screen and (min-width:780px) {
-    margin-right:0px;
-    margin-bottom: 0px;
-    width: calc(50vw - 3.8rem);
-    height:calc((50vw - 3.8rem) / 16 * 9);
+  @media only screen and (min-width:780px) {
+    margin-right:0rem;
+    width: calc(((100vw - 16px) / 2) - 1rem);
   }
   @media only screen and (min-width:1200px) {
-    margin-right:0px;
-    margin-bottom: 0px;
-    width: calc((100vw / 3) - 3.7rem);
-    height:calc(((100vw / 3) - 3.7rem) / 16 * 9);
+    margin-right:0rem;
+    width: calc(((100vw - 16px) / 3) - 1rem);
   }
   @media only screen and (min-width:1650px) {
-    margin-right:0px;
-    margin-bottom: 0px;
-    width: calc((100vw / 4) - 3.6rem);
-    height:calc(((100vw / 4) - 3.6rem) / 16 * 9);
-  } */
+    margin-right:0rem;
+    width: calc(((100vw - 16px) / 4) - 1rem);
+  }
 `
 const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
-  width:calc(100vw - 2rem - 2.4rem);
-  height:calc((100vw - 2rem - 2.4rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+  width:calc(((100vw - 16px) / 1) - 2.4rem - 1rem);
+  height:calc((((100vw - 16px) / 1) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
   background-color: #272b35;
   border-radius: 8px;
   display:flex;
@@ -100,8 +94,6 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   justify-content: space-between;
   padding:1.2rem;
   margin-bottom: 8px;
-  max-width: calc(42.5vh / ${(props)=>props.ratio2 ? props.ratio2 : 9} * ${ (props)=>props.ratio1 ? props.ratio1 : 16});
-  max-height: 42.5vh;
   div{
     display:flex;
     align-items: center;
@@ -109,6 +101,18 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
         font-size: 14px;
         margin-left: 8px;
       }
+  }
+  @media only screen and (min-width:780px) {
+    width: calc(((100vw - 16px) / 2) - 2.4rem - 1rem);
+    height:calc((((100vw - 16px) / 2) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+  }
+  @media only screen and (min-width:1200px) {
+    width: calc(((100vw - 16px) / 3) - 2.4rem - 1rem);
+    height:calc((((100vw - 16px) / 3) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+  }
+  @media only screen and (min-width:1650px) {
+    width: calc(((100vw - 16px) / 4) - 2.4rem - 1rem);
+    height:calc((((100vw - 16px) / 4) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
   }
 `
 const UserImg = styled.img`
@@ -152,7 +156,6 @@ const PlayBtn = styled.a`
   border-radius: 8px;
   padding: 6px 8px;
   margin: 2px;
-  /* border:2px solid #C8D4E6; */
   h1{
     font-size: 18px;
     margin-left: 8px;
