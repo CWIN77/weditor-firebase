@@ -25,8 +25,7 @@ function Request() {
         </div>
         <div style={{justifyContent:'center'}}>
           <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-            <Svg_play width={16} height={16} stroke="#C8D4E6" />
-            <h1>Play</h1>
+            <Svg_play width={20} height={20} stroke="#C8D4E6" />
           </PlayBtn>
         </div>
         <div style={{justifyContent: "space-between"}}>
@@ -84,9 +83,9 @@ const Container = styled.div`
     width: calc(((100vw - 16px) / 4) - 1rem);
   }
 `
-const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
+const Guide = styled.div`
   width:calc(((100vw - 16px) / 1) - 2.4rem - 1rem);
-  height:calc((((100vw - 16px) / 1) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+  height:calc((((100vw - 16px) / 1) - 2.4rem - 1rem) / 16 * 9 );
   background-color: #272b35;
   border-radius: 8px;
   display:flex;
@@ -104,15 +103,15 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   }
   @media only screen and (min-width:780px) {
     width: calc(((100vw - 16px) / 2) - 2.4rem - 1rem);
-    height:calc((((100vw - 16px) / 2) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+    height:calc((((100vw - 16px) / 2) - 2.4rem - 1rem) / 16 * 9 );
   }
   @media only screen and (min-width:1200px) {
     width: calc(((100vw - 16px) / 3) - 2.4rem - 1rem);
-    height:calc((((100vw - 16px) / 3) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+    height:calc((((100vw - 16px) / 3) - 2.4rem - 1rem) / 16 * 9 );
   }
   @media only screen and (min-width:1650px) {
     width: calc(((100vw - 16px) / 4) - 2.4rem - 1rem);
-    height:calc((((100vw - 16px) / 4) - 2.4rem - 1rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+    height:calc((((100vw - 16px) / 4) - 2.4rem - 1rem) / 16 * 9 );
   }
 `
 const UserImg = styled.img`
@@ -123,7 +122,6 @@ const UserImg = styled.img`
 `
 const Title = styled.h1`
   font-size: 18px;
-  /* font-weight: bold; */
   width:92%;
   margin-top:4px;
   margin-bottom: 6px;
@@ -154,7 +152,7 @@ const PlayBtn = styled.a`
   display:flex;
   align-items: center;
   border-radius: 8px;
-  padding: 6px 8px;
+  padding: 8px;
   margin: 2px;
   h1{
     font-size: 16px;

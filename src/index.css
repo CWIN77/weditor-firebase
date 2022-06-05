@@ -25,14 +25,6 @@ code {
   font-weight: 400;
 }
 
-/* #root::-webkit-scrollbar{
-  width: 2px;
-  background-color: red;
-}
-#root::-webkit-scrollbar-track{
-  width: 2px;
-} */
-
 body::-webkit-scrollbar{
   width:8px;
   background-color: initial;

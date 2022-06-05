@@ -46,8 +46,7 @@ function Detail() {
             </div>
             <div style={{justifyContent:'center'}}>
               <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-                <Svg_play width={16} height={16} stroke="#C8D4E6" />
-                <h1>Play</h1>
+                <Svg_play width={20} height={20} stroke="#C8D4E6" />
               </PlayBtn>
             </div>
             <div style={{justifyContent: "space-between"}}>
@@ -74,11 +73,6 @@ function Detail() {
             <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
             <h2>그리고 밑에 적는 하이라이트 부분은</h2>
             <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-            <h2>그리고밑에 적는 하이라이트 부분은</h2>
-            <h2>꼭 넣어주세요 2:35 하이라이트영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-            <h2>그리고 밑에 적는 하이라이트 부분은</h2>
-            <h2>영상에 맞게 재미있는 자막과 컷편집을 해주세요</h2>
-            <h2>그리고밑에 적는 하이라이트 부분은</h2>
             {/* 작성시 엔터마다 ^를 넣고 후에 폰트를 ^에 따라 배열로 변환하여 */}
           </Explane>
         </Main>
@@ -182,9 +176,9 @@ const Information = styled.div`
     margin-right: 4px;
   }
 `
-const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
+const Guide = styled.div`
   width:calc(100vw - 2rem - 2.4rem);
-  height:calc((100vw - 2rem - 2.4rem) / ${ (props)=>props.ratio1 ? props.ratio1 : 16} * ${(props)=>props.ratio2 ? props.ratio2 : 9} );
+  height:calc((100vw - 2rem - 2.4rem) / 16 * 9 );
   background-color: #272b35;
   border-radius: 8px;
   display:flex;
@@ -192,7 +186,7 @@ const Guide = styled.div<{ratio1?:string, ratio2?:string}>`
   justify-content: space-between;
   padding:1.2rem;
   margin-bottom: 12px;
-  max-width: calc(45vh / ${(props)=>props.ratio2 ? props.ratio2 : 9} * ${ (props)=>props.ratio1 ? props.ratio1 : 16});
+  max-width: calc(45vh / 1 * 2);
   max-height: 45vh;
   div{
     display:flex;
