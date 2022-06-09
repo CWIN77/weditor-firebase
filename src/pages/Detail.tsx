@@ -15,7 +15,7 @@ import { ReactComponent as Svg_box } from '../svgs/box.svg';
 
 function Detail() {
   const topIconStyle = {fill:"#C8D4E6",width:20,height:20,style:{padding:"0.5rem",cursor:'pointer'}}
-  const mainIconStyle = {fill:"#C8D4E6",width:16,height:16}
+  const mainIconStyle = {fill:"#C8D4E6",width:18,height:18}
   const navIconStyle = {fill:"#C8D4E6",width:20,height:20,stroke:"#C8D4E6"}
   const {id} = useParams();
   useEffect(()=>{
@@ -46,7 +46,7 @@ function Detail() {
             </div>
             <div style={{justifyContent:'center'}}>
               <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-                <Svg_play width={20} height={20} stroke="#C8D4E6" />
+                <Svg_play width={22} height={22} stroke="#C8D4E6" />
               </PlayBtn>
             </div>
             <div style={{justifyContent: "space-between"}}>
@@ -151,7 +151,7 @@ const Explane = styled.div`
   width:95%;
 `
 const Title = styled.h1`
-  font-size: 21px;
+  font-size: 20px;
   word-wrap: break-word;
 `
 const Information = styled.div`
@@ -192,7 +192,7 @@ const Guide = styled.div`
     display:flex;
     align-items: center;
     h2{
-        font-size: 13px;
+        font-size: 14px;
         margin-left: 6px;
       }
   }

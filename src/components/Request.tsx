@@ -9,7 +9,7 @@ import { ReactComponent as Svg_clock } from '../svgs/clock.svg';
 import { ReactComponent as Svg_menu } from '../svgs/menu.svg';
 
 function Request() {
-  const iconStyle = {fill:"#C8D4E6",width:16,height:16}
+  const iconStyle = {fill:"#C8D4E6",width:18,height:18}
   return (
     <Container>
       <Guide>
@@ -25,7 +25,7 @@ function Request() {
         </div>
         <div style={{justifyContent:'center'}}>
           <PlayBtn href='https://youtu.be/3Wex4qJJN-s' target='_blank'>
-            <Svg_play width={20} height={20} stroke="#C8D4E6" />
+            <Svg_play width={22} height={22} stroke="#C8D4E6" />
           </PlayBtn>
         </div>
         <div style={{justifyContent: "space-between"}}>
@@ -39,7 +39,7 @@ function Request() {
           </div>
         </div>
       </Guide>
-      <div style={{marginLeft:2}}>
+      <div style={{margin:4}}>
         <div style={{display:"flex",alignItems:'center'}}>
           <UserImg src='https://lh3.googleusercontent.com/a-/AOh14GhBIpwktw4iDwX7_dafbrn64O2wNRJbx1hivycj5A=s96-c'/>
           <StatusText>CWIN77</StatusText>
@@ -50,13 +50,13 @@ function Request() {
           <Title>간단하게 컷편집 해주세요!</Title>
           <ExplaneText>게임 플레이 영상중에서 괜찮은 장면만 적당히 골라서 컷편집으로 만들어서 올려주세요.</ExplaneText>
         </Link>
-      </div>
-      <div style={{display:'flex',alignItems:'center',marginTop:8,marginBottom:2,justifyContent:"space-between",width:'100%'}}>
-        <div style={{display:'flex',alignItems:'center',margin:2,marginTop:6}}>
-          <Svg_money width={20} height={20} fill="#C8D4E6" />
-          <Payment>60,000원~</Payment>
+        <div style={{display:'flex',alignItems:'center',marginTop:8,marginBottom:2,justifyContent:"space-between",width:'100%'}}>
+          <div style={{display:'flex',alignItems:'center',margin:2,marginTop:6}}>
+            <Svg_money width={20} height={20} fill="#C8D4E6" />
+            <Payment>60,000원~</Payment>
+          </div>
+          <Svg_menu width={20} height={20} fill="#C8D4E6" style={{padding:6}} / >
         </div>
-        <Svg_menu width={20} height={20} fill="#C8D4E6" style={{padding:6}} />
       </div>
     </Container>
   )
@@ -92,12 +92,12 @@ const Guide = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding:1.2rem;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   div{
     display:flex;
     align-items: center;
     h2{
-        font-size: 13px;
+        font-size: 14px;
         margin-left: 8px;
       }
   }
@@ -123,8 +123,8 @@ const UserImg = styled.img`
 const Title = styled.h1`
   font-size: 18px;
   width:92%;
-  margin-top:4px;
-  margin-bottom: 6px;
+  margin-top:2px;
+  margin-bottom: 4px;
 `
 const StatusText = styled.h4`
   font-size: 11px;
@@ -132,7 +132,7 @@ const StatusText = styled.h4`
 `
 const ExplaneText = styled.h2`
   font-size: 14px;
-  margin-top: 6px;
+  margin-top: 4px;
   width:92%;
   color: rgba(218, 228, 242, 0.7);
 `

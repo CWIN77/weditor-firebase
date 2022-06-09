@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import Request from '../components/Request'
+import {getData} from '../firebase/firestore'
 
 function Home() {
   return (
     <Container>
+      <Request/>
       <Request/>
       <Request/>
       <Request/>
